@@ -1,2 +1,27 @@
-# PocketPet
-Digital pet android apps
+# Pocket Pet Android v0.4 – Living Pet
+
+Child-friendly offline digital-pet prototype. The pet starts as an Egg and grows through Pichu → Pikachu → Raichu, with an optional Mega form in this internal fan prototype.
+
+## v0.4 interaction upgrades
+- Egg wiggle/crack/hatch flow
+- Tap = head pat, swipe = pet, hold = cuddle
+- Feed: choose food, then drag it onto the pet
+- Play: throw/drag a ball and the pet chases it; Peekaboo and Dance remain simple
+- Bath: swipe over the pet 3 times; bubbles are shown
+- Sleep animation + refreshed wake-up
+- Gentle autonomous walking/idle movement
+- Evolution flash overlay for hatch/evolution/Mega unlock
+- Friendly optional battle; no injury/death language
+- Offline save using SharedPreferences
+- No Internet permission, ads, login, public chat, loot box, or pet death
+
+## Build
+Open this folder in Android Studio and build the `app` module. This repository intentionally uses programmatic drawing/placeholders rather than shipping official Pokémon artwork.
+
+## Prototype thresholds
+- Egg → Pichu: 4 gentle care interactions
+- Pichu → Pikachu: Lv.3 + Bond 15
+- Pikachu → Raichu: Lv.6 + Bond 30
+- Raichu → Mega choice: Lv.10 + Bond 50
+
+The thresholds are deliberately fast for playtesting.
