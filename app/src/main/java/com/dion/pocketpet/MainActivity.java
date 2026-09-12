@@ -2,6 +2,7 @@ package com.dion.pocketpet;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -50,6 +51,14 @@ public class MainActivity extends Activity {
     @Override protected void onPause() {
         state.save(this);
         super.onPause();
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        if (petView != null) {
+            state = GameState.load(this);
+            refresh();
+        }
     }
 
     private void buildUi() {
@@ -336,15 +345,7 @@ public class MainActivity extends Activity {
                 .setTitle("Tiny Adventure")
                 .setItems(items, (d, which) -> {
                     if (which == 0) {
-                        state.energy = GameState.clamp(state.energy - 8);
-                        state.happy = GameState.clamp(state.happy + 5);
-                        state.bond = GameState.clamp(state.bond + 1);
-                        String[] finds = {"a shiny leaf", "two berries", "a pretty pebble", "a butterfly friend"};
-                        String found = finds[(int)(System.currentTimeMillis() % finds.length)];
-                        int reward = state.megaActive && state.megaChoice == 2 ? 14 : 10;
-                        say(state.name + " found " + found + "! 🌿  " + state.addExp(reward), 3200);
-                        refreshAndSave();
-                        checkGrowth();
+                        startActivity(new Intent(this, ForestActivity.class));
                     } else if (which == 1) {
                         state.energy = GameState.clamp(state.energy - 10);
                         new BattleDialog(this, state, (won, reward) -> {

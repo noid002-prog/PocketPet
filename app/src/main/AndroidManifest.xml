@@ -6,6 +6,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PocketPet">
         <activity
+            android:name=".ForestActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">

@@ -25,3 +25,10 @@ Open this folder in Android Studio and build the `app` module. This repository i
 - Raichu → Mega choice: Lv.10 + Bond 50
 
 The thresholds are deliberately fast for playtesting.
+
+
+## v0.6 Motion & Forest Walk
+- More organic pet motion: breathing, squash/stretch, lean, ear/tail follow-through and reaction animations.
+- Larger food cards, food tokens and ball touch targets for children.
+- Forest Walk is now a playable 30-second parallax scene with collectible goodies and jump obstacles.
+- Forest rewards feed back into EXP, Happy, Bond and Energy.
