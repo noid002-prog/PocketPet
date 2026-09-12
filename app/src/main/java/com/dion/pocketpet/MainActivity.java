@@ -207,7 +207,7 @@ public class MainActivity extends Activity {
                 .setPositiveButton("🥚 TAP TO HATCH", (dialog, which) -> finishHatch())
                 .setCancelable(false)
                 .create();
-        d.setOnDismiss(x -> hatchDialogOpen = false);
+        d.setOnDismissListener(x -> hatchDialogOpen = false);
         d.show();
     }
 
@@ -445,7 +445,7 @@ public class MainActivity extends Activity {
                 })
                 .setNegativeButton("Later", null)
                 .create();
-        dialog.setOnDismiss(x -> growthDialogOpen = false);
+        dialog.setOnDismissListener(x -> growthDialogOpen = false);
         dialog.show();
     }
 
@@ -459,7 +459,7 @@ public class MainActivity extends Activity {
                 .setNegativeButton("🟡 Mega Raichu Y", (d, w) -> chooseMega(2))
                 .setNeutralButton("Later", null)
                 .create();
-        dialog.setOnDismiss(x -> growthDialogOpen = false);
+        dialog.setOnDismissListener(x -> growthDialogOpen = false);
         dialog.show();
     }
 
